@@ -38,11 +38,15 @@ DJANGO_APPS = [
     "django.contrib.staticfiles",
 ]
 
+PACKAGE_APPS = [
+    "django_ace",
+]
+
 PROJECT_APPS = [
     "queries",
 ]
 
-INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS
+INSTALLED_APPS = DJANGO_APPS + PACKAGE_APPS + PROJECT_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
