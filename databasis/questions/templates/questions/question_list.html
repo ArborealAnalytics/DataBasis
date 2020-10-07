@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Questions</h1>
+
+    {% if questions %}
+        <ul class="list-group">
+            {% for question in questions %}
+                <li class="list-group-item">
+                    {{ question }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</div>
+{% endblock content %}
