@@ -40,6 +40,7 @@ DJANGO_APPS = [
 
 PACKAGE_APPS = [
     "django_ace",
+    "taggit",
 ]
 
 PROJECT_APPS = [
