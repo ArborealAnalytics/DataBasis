@@ -7,8 +7,15 @@
     {% if questions %}
         <ul class="list-group">
             {% for question in questions %}
-                <li class="list-group-item">
+                <li class="list-group-item d-flex justify-content-between">
                     {{ question }}
+                    {% if question.keywords %}
+                    <div class="ml-auto"></div>
+                        {% for keyword in question.keywords.all %}
+                            <span class="badge badge-secondary font-weight-bold ml-1">{{ keyword }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
                 </li>
             {% endfor %}
         </ul>
