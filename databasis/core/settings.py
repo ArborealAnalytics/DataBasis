@@ -45,6 +45,7 @@ PACKAGE_APPS = [
 PROJECT_APPS = [
     "front_page",
     "queries",
+    "questions",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + PACKAGE_APPS + PROJECT_APPS
