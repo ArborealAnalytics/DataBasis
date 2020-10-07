@@ -12,7 +12,7 @@
                     {% if question.keywords %}
                     <div class="ml-auto"></div>
                         {% for keyword in question.keywords.all %}
-                            <span class="badge badge-secondary font-weight-bold ml-1">{{ keyword }}</span>
+                            <span class="badge badge-light text-dark ml-1">{{ keyword }}</span>
                         {% endfor %}
                     </div>
                     {% endif %}
