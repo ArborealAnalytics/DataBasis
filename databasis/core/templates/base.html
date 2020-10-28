@@ -12,11 +12,32 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-light">
-        <span class="navbar-brand mb-0 h1">DataBasis</span>
-        <span class="navbar-text">
-            Explain the basis of data insights.
-        </span>
+    <nav class="navbar navbar-light bg-light navbar-expand-md justify-content-between">
+        <a href="/">
+            <span class="navbar-brand">
+                DataBasis
+            </span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <span class="navbar-text mr-auto">
+                Explain the basis of data insights.
+            </span>
+
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'questions_index' %}">
+                        Questions
+                    </a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
     <div class="container-fluid">
