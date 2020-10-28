@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 from taggit.managers import TaggableManager
 
@@ -17,3 +18,6 @@ class Question(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse("question_detail", kwargs={"pk": self.pk})
