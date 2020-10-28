@@ -39,6 +39,7 @@ DJANGO_APPS = [
 ]
 
 PACKAGE_APPS = [
+    "crispy_forms",
     "django_ace",
     "taggit",
 ]
@@ -134,3 +135,5 @@ USE_TZ = True
 STATIC_URL = "/static/"
 
 TAGGIT_CASE_INSENSITIVE = True
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
