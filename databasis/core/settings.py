@@ -45,6 +45,7 @@ PACKAGE_APPS = [
 ]
 
 PROJECT_APPS = [
+    "accounts",
     "front_page",
     "queries",
     "questions",
