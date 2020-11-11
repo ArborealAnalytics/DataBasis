@@ -4,16 +4,23 @@
 <div class="container">
     <h1>
         <span>Questions</span>
-        <a href="{% url 'question_create' %}" class="btn btn-secondary">Add question</a>
+        <a href="{% url 'question_create' %}" class="btn btn-sm btn-secondary">
+            Add question
+        </a>
     </h1>
 
     {% if questions %}
         <ul class="list-group">
             {% for question in questions %}
                 <li class="list-group-item d-flex justify-content-between">
+                    <a href="{% url 'question_detail' question.pk %}" class="btn btn-sm btn-secondary mr-2">
+                        View
+                    </a>
+
                     {{ question }}
+                    
                     {% if question.keywords %}
-                    <div class="ml-auto"></div>
+                    <div class="ml-auto">
                         {% for keyword in question.keywords.all %}
                             <span class="badge badge-light text-dark ml-1">{{ keyword }}</span>
                         {% endfor %}
