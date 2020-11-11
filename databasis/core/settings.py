@@ -25,7 +25,8 @@ SECRET_KEY = "=)js9d)u)8*7!dhjji4k#yk5v)&qpy0*1z@pb3(9%#*c9oe7ih"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+
 
 AUTH_USER_MODEL = "accounts.User"
 LOGIN_REDIRECT_URL = "front_page"
