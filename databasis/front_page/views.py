@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.template import loader
 
 
-def index(request):
+def front_page(request):
     context = {}
     template = loader.get_template("front_page/front_page.html")
 
