@@ -28,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 AUTH_USER_MODEL = "accounts.User"
+LOGIN_REDIRECT_URL = "front_page"
 
 # Application definition
 DJANGO_APPS = [
