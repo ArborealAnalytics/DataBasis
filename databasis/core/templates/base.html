@@ -37,6 +37,12 @@
                             Questions
                         </a>
                     </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'logout' %}">
+                            Log out
+                        </a>
+                    </li>
                 {% else %}
                     <a href="{% url 'login' %}" class="nav-link">
                         Log in
