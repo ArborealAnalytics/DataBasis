@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <h1>
+            <span>
+                {{ question.title }}
+            </span>
+
+            <a href="{% url 'question_update' question.pk %}" class="btn btn-sm btn-secondary">
+                Edit
+            </a>
+        </h1>
+
+        {% if question.keywords.all %}
+
+            {% for keyword in question.keywords.all %}
+                <span class="badge badge-light text-dark ml-1">{{ keyword }}</span>
+            {% endfor %}
+
+        {% endif %}
+
+        <p>{{ question.description }}</p>
+    </div>
+{% endblock content %}
