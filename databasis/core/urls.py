@@ -20,6 +20,7 @@ from front_page import urls as front_page_urls
 from questions import urls as questions_urls
 
 urlpatterns = [
+    path("accounts/", include("django.contrib.auth.urls")),
     path("admin/", admin.site.urls),
     path("questions/", include(questions_urls)),
     path("", include(front_page_urls)),
