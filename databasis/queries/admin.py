@@ -2,6 +2,7 @@ from django import forms
 from django.contrib import admin
 
 from django_ace import AceWidget
+from simple_history.admin import SimpleHistoryAdmin
 
 from .models import Query
 
@@ -14,5 +15,5 @@ class QueryModelAdminForm(forms.ModelForm):
 
 
 @admin.register(Query)
-class QueryModelAdmin(admin.ModelAdmin):
+class QueryModelAdmin(SimpleHistoryAdmin):
     form = QueryModelAdminForm
