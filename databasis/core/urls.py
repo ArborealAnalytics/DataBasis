@@ -16,10 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+import debug_toolbar
+
 from front_page import urls as front_page_urls
 from questions import urls as questions_urls
 
 urlpatterns = [
+    path("__debug__/", include(debug_toolbar.urls)),
     path("accounts/", include("django.contrib.auth.urls")),
     path("admin/", admin.site.urls),
     path("questions/", include(questions_urls)),

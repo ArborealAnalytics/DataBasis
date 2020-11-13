@@ -25,8 +25,10 @@ SECRET_KEY = "=)js9d)u)8*7!dhjji4k#yk5v)&qpy0*1z@pb3(9%#*c9oe7ih"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
-
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
 
 AUTH_USER_MODEL = "accounts.User"
 LOGIN_REDIRECT_URL = "front_page"
@@ -47,6 +49,7 @@ DJANGO_APPS = [
 PACKAGE_APPS = [
     "crispy_forms",
     "django_ace",
+    "debug_toolbar",
     "taggit",
 ]
 
@@ -60,6 +63,7 @@ PROJECT_APPS = [
 INSTALLED_APPS = DJANGO_APPS + PACKAGE_APPS + PROJECT_APPS
 
 MIDDLEWARE = [
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
