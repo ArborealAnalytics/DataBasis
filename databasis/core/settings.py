@@ -50,6 +50,7 @@ PACKAGE_APPS = [
     "crispy_forms",
     "django_ace",
     "debug_toolbar",
+    "simple_history",
     "taggit",
 ]
 
@@ -72,6 +73,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
+    "simple_history.middleware.HistoryRequestMiddleware",
 ]
 
 ROOT_URLCONF = "core.urls"
