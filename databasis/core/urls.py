@@ -19,12 +19,14 @@ from django.urls import include, path
 import debug_toolbar
 
 from front_page import urls as front_page_urls
+from queries import urls as queries_urls
 from questions import urls as questions_urls
 
 urlpatterns = [
     path("__debug__/", include(debug_toolbar.urls)),
     path("accounts/", include("django.contrib.auth.urls")),
     path("admin/", admin.site.urls),
+    path("queries/", include(queries_urls)),
     path("questions/", include(questions_urls)),
     path("", include(front_page_urls)),
 ]
