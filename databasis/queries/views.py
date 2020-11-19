@@ -5,6 +5,7 @@ from django.utils.decorators import method_decorator
 from django.views.generic import DetailView, ListView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 
+from .forms import QueryForm
 from .models import Query
 
 @method_decorator(login_required, name='dispatch')
@@ -20,12 +21,12 @@ class QueryDetailView(DetailView):
 @method_decorator(login_required, name='dispatch')
 class QueryCreateView(CreateView):
     model = Query
-    fields = ["title", "description", "keywords", "sql"]
+    form_class = QueryForm
 
 @method_decorator(login_required, name='dispatch')
 class QueryUpdateView(UpdateView):
     model = Query
-    fields = ["title", "description", "keywords", "sql"]
+    form_class = QueryForm
 
 @method_decorator(staff_member_required, name='dispatch')
 class QueryDeleteView(DeleteView):
