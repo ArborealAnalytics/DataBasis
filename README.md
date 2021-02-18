@@ -11,23 +11,31 @@ DataBasis is a work-in-process with a few goals in mind
 Below are steps to get started developing this project.
 
 ### Prerequisites
-This project is built with Python 3 and the Poetry package manager. Please make sure to install the latest version of Python 3.x and Poetry.
+Please make sure to install a recent version of [Python](https://www.python.org/) 3.x and the [Poetry package manager](https://python-poetry.org/).
 
-### Virtual environment
-Use the following commands, in the root directory of this repository, to create a virtual environment and install dependencies.
+### Create virtual environment
+From within this **source-code folder**, use the following commands to create a virtual environment and install dependencies.
 
 Activate virtual environment:
 ```
 poetry shell
 ```
 
-Install dependencies:
+### Install dependencies:
 ```
 poetry install
 ```
 
+### Re-activating the virtual environment
+When developing the project, you only need to install the virtual environment and dependencies when things change. Mostly, you will just re-activate the existing virtual environment when developing.
+
+Activate the existing virtual environment:
+```
+poetry shell
+```
+
 ### Change to project directory
-Once the virtual environment is activated, you can move into the project directory.
+Once the virtual environment is activated, you can move into the **project directory** (which is in a sub-folder of the source-code folder).
 
 ```
 cd databasis
