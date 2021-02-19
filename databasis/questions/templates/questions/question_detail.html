@@ -12,7 +12,7 @@
             </a>
         </h1>
 
-        {% if question.keywords.all %}
+        {% if question.keywords.exists %}
 
             {% for keyword in question.keywords.all %}
                 <span class="badge badge-light text-dark ml-1">{{ keyword }}</span>
@@ -22,8 +22,10 @@
 
         <p>{{ question.description }}</p>
         
-        {% if question.queries.all %}
-            <h2 class="h3">Related Queries</h2>
+        {% if question.queries.exists %}
+            <h2 class="h3">
+                Related Queries
+            </h2>
 
             <ul>
                 {% for query in question.queries.all %}
