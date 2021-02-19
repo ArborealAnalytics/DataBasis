@@ -22,19 +22,19 @@
 
         <p>{{ question.description }}</p>
         
-        {% if question.keywords.all %}
-        <h2 class="h3">Related Queries</h2>
+        {% if question.queries.all %}
+            <h2 class="h3">Related Queries</h2>
 
-        <ul>
-            {% for query in question.queries.all %}
-                <li>
-                    <a 
-                        href="{% url 'query_detail' query.pk %}">
-                        {{ query }}
-                    </a> 
-                </li>
-            {% endfor %}
-        </ul>
+            <ul>
+                {% for query in question.queries.all %}
+                    <li>
+                        <a 
+                            href="{% url 'query_detail' query.pk %}">
+                            {{ query }}
+                        </a> 
+                    </li>
+                {% endfor %}
+            </ul>
         {% endif %}
     </div>
 {% endblock content %}
