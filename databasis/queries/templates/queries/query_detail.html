@@ -43,6 +43,28 @@
                 </button>
             </div>
         </div>
+
+        {% if query.history.exists %}
+            <div class="row">
+                <h2>
+                    Revision history
+                </h2>
+
+                <table class="table">
+                    <tr>
+                        <th>User</th>
+                        <th>Revision date</th>
+                    </tr>
+                    {% for revision in query.history.all %}
+                        <tr>
+                            <td>{{ revision.history_user }}</td>
+                            <td>{{ revision.history_date }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+
+            </div>
+        {% endif %}
     </div>
 {% endblock content %}
 
