@@ -13,11 +13,9 @@
         <ul class="list-group">
             {% for question in questions %}
                 <li class="list-group-item d-flex justify-content-between">
-                    <a href="{% url 'question_detail' question.pk %}" class="btn btn-sm btn-secondary mr-2">
-                        View
+                    <a href="{% url 'question_detail' question.pk %}">
+                        {{ question }}
                     </a>
-
-                    {{ question }}
                     
                     {% if question.keywords %}
                     <div class="ml-auto">
