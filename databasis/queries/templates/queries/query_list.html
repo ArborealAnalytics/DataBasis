@@ -13,12 +13,10 @@
         <ul class="list-group">
             {% for query in queries %}
                 <li class="list-group-item d-flex justify-content-between">
-                    <a href="{% url 'query_detail' query.pk %}" class="btn btn-sm btn-secondary mr-2">
-                        View
+                    <a href="{% url 'query_detail' query.pk %}">
+                        {{ query }}
                     </a>
 
-                    {{ query }}
-                    
                     {% if query.keywords %}
                     <div class="ml-auto">
                         {% for keyword in query.keywords.all %}
